@@ -1,0 +1,117 @@
+@import "../../variables.scss";
+.home {
+  main {
+    height: 100vh;
+    width: 100vw;
+    padding: 17px 20px 0 20px;
+    background: #d8dde4;
+    transition: margin 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    margin-left: 90px;
+    position: relative;
+    .burger-menu {
+      display: none;
+    }
+    @include media-query(md) {
+      margin-left: 0px;
+      .burger-menu {
+        display: flex;
+      }
+      h1 {
+        display: flex;
+        width: calc(100% + 40px);
+        background: #1b1a2d;
+        color: white;
+        padding: 20px;
+        margin: -17px -20px 10px;
+        .burger-menu {
+          padding-right: 20px;
+          display: flex;
+          align-items: center;
+          i {
+            color: white;
+          }
+        }
+      }
+    }
+    &.menu-open {
+      margin-left: 262px;
+      @include media-query(md) {
+        margin-left: 0px;
+      }
+    }
+    h1 {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+    }
+    .cards-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -10px;
+      &.card-holder {
+        margin: -10px;
+      }
+      @include media-query(md) {
+        &.card-holder {
+          margin: 0;
+          padding: 0 !important;
+        }
+      }
+      > .card-holder {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+      }
+    }
+
+    .card-body {
+      display: flex;
+      flex-wrap: wrap;
+      > div {
+        width: 100%;
+        &.huge-number {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: bold;
+          font-size: 72px;
+          line-height: 515px;
+          color: #141414;
+        }
+        @include media-query(lg) {
+          &.huge-number {
+            line-height: 841px;
+          }
+        }
+        @include media-query(md) {
+          &.huge-number {
+            line-height: 189px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#big-green-button {
+  transform: rotate(0deg);
+  animation: nudge 4s linear 2s infinite;
+}
+
+@keyframes nudge {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  2% {
+    transform: rotate(-6deg);
+  }
+
+  4% {
+    transform: rotate(6deg);
+  }
+
+  6% {
+    transform: rotate(0deg);
+  }
+}
