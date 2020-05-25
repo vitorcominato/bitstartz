@@ -1,0 +1,50 @@
+ul.popular-movies {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-height: 250px;
+  overflow: hidden auto;
+  margin: 0;
+  li.movie-item {
+    width: calc(100% + 14px);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 6px 20px;
+    margin: 0 -7px;
+    &:hover {
+      background-color: #F2F6F9;
+    }
+    > div {
+      padding: 0 7px;
+      display: flex;
+      align-items: center;
+    }
+    .movie-img img {
+      border-radius: 5px;
+    }
+
+    .play-wrapper {
+      width: 32px;
+      height: 32px;
+      background: #d5dee7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      cursor: pointer;
+      .play-icon {
+        width: 0;
+        height: 0;
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        border-left: 10px solid #585d6d;
+      }
+    }
+
+    .movie-info {
+      width: calc(100% - 104px - 46px);
+    }
+  }
+}
