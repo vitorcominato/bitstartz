@@ -1,0 +1,57 @@
+.my-coupons {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  list-style: none;
+  li.coupon-item {
+    height: 85px;
+    padding: 25px 20px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      transform: skew(0deg) scaleX(0);
+      background: #fff6de;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: transform 1s;
+    }
+
+    &:hover:after {
+      transform: skew(80deg) scaleX(1.6);
+    }
+    > div:first-child {
+      width: 44px;
+      padding-right: 20px;
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      z-index: 1;
+      button {
+        text-transform: none;
+      }
+    }
+    .list-icon .icon-ticket {
+      position: relative;
+      color: #ffa726;
+      font-size: 18px;
+    }
+
+    .list-icon .icon-star {
+      position: absolute;
+      font-size: 9px;
+      top: 5px;
+      left: 5px;
+      color: #f44336;
+    }
+  }
+}
