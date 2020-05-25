@@ -1,0 +1,47 @@
+.app-text-right {
+  text-align: right;
+}
+
+.app-text-left {
+  text-align: left;
+}
+
+.app-text-center {
+  text-align: center;
+}
+
+.no-click {
+  cursor: default !important;
+}
+
+.app-hide,
+.hide {
+  display: none !important;
+}
+
+.app-hide,
+.show {
+  display: block;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9EAABA; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9EAABA; 
+}
+
+* {
+  box-sizing: border-box;
+}

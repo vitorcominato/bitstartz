@@ -1,0 +1,31 @@
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 10px 0 0 0;
+  overflow: hidden;
+  opacity: 1;
+  transition: all .5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  .complete-bar {
+    animation: progress-bar 2s cubic-bezier(0.25, 0.8, 0.25, 1) .5s 1;
+    animation-fill-mode: forwards;
+    transform-origin: 0% 50%;
+    transition: width 5s linear;
+    background: linear-gradient(184.41deg, #21a2ff 5.59%, #3861fb 97.24%);
+    height: 4px;
+    transform: scaleX(0);
+    &.secondary {
+      background: #4f5168;
+    }
+  }
+}
+@keyframes progress-bar {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
