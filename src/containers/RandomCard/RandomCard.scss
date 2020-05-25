@@ -1,0 +1,35 @@
+.random-card {
+  height: 100%;
+  .random-content {
+    height: calc(100% - 44px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    > * {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    h4.random-title {
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 23px;
+      margin-bottom: 10px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #141414;
+    }
+    p.random-text {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 21px;
+      text-align: center;
+      color: #585d6d;
+    }
+    .random-icon {
+      margin-bottom: 26px;
+    }
+  }
+}
