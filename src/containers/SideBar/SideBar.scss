@@ -3,7 +3,7 @@
 .sidebar {
   background: $secondary;
   height: 100vh;
-  width: 262px;
+  width: 265px;
   position: fixed;
   overflow: hidden;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -13,16 +13,16 @@
   opacity: 0;
   z-index: 1;
   @include media-query(md) {
-    left: -262px;
-    position: absolute;
+    left: -265px;
     animation: none;
   }
   &.-close {
     width: 90px;
     @include media-query(md) {
-      width: 262px;
+      width: 265px;
       left: 0;
       opacity: 1;
+      overflow-y: auto;
     }
     @media (min-width: 926px) {
       h2 {
